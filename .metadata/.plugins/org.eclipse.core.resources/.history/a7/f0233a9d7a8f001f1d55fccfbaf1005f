@@ -1,0 +1,12 @@
+package com.Monady;
+import java.sql.*;
+public class Mainclass {
+public static void main(String[] args) throws Exception{
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/monday", "root", "root");
+	CallableStatement p = c.prepareCall("create table emp(id int primary key,ename varchar(20) not null,phno bigint unique)");
+	boolean e=p.execute();
+	System.out.println(e);
+	c.close();
+}
+}

@@ -1,0 +1,8 @@
+package com.Monady;
+import java.sql.*;
+public class Mainclass {
+public static void main(String[] args) throws Exception{
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	DriverManager.getConnection("jdbc:mysql://localhost:3306", "root", "root");
+}
+}

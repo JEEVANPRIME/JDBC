@@ -1,0 +1,12 @@
+package com.Setters;
+import java.sql.*;
+public class UsingSetters {
+public static void main(String[] args) throws Exception {
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/JDBC3", "root", "root");
+	CallableStatement p = c.prepareCall("insert into student values(1,'abc', 1234568790)");
+	int e=p.executeUpdate();
+	System.out.println(e);
+	c.close();
+}
+}

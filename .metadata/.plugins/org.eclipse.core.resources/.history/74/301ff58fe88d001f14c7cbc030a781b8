@@ -1,0 +1,5 @@
+package com.jdbc1;
+import java.sql.*;
+public class Jdbc1 {
+
+}
